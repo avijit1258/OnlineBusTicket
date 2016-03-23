@@ -14,6 +14,25 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/places', 'BusController@indexPlace');
+
+Route::post('/places', 'BusController@storePlace' );
+
+Route::get('/admin/routes', function(){
+    return view('admin.adding_routes');
+});
+Route::post('/adding_routes', 'BusController@storeRoutes');
+
+Route::get('/admin/company', function(){
+    return view('admin.adding_company');
+});
+Route::post('/admin/company', 'BusController@storeCompany');
+
+Route::get('/admin/all_routes', 'BusController@indexAllRoutes');
+
+Route::get('/route/edit/{{$id}}','BusController@updateAllRoutes');
+
+Route::post('/route/edit/{{$id}}','BusController@updateAllRoutes');
 
 /*
 |--------------------------------------------------------------------------

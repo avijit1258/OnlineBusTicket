@@ -15,7 +15,7 @@ class CreateBusTypeTable extends Migration
         Schema::create('bus_type', function (Blueprint $table) {
             $table->increments('id');
             $table->text('type');
-            $table->integer('bus_bus_id');
+            $table->integer('bus_id')->unsigned();
             $table->timestamps();
         });
     }

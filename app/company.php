@@ -10,4 +10,5 @@ class company extends Model
     {
         return $this->hasMany('App\bus');
     }
+
 }

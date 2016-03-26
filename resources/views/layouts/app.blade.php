@@ -87,8 +87,8 @@
             <li><a href="#about">Bus Type</a></li>
             <li><a href="/admin/routes">Routes</a></li>
             <li><a href="/admin/all_routes">All Routes</a></li>
-            <li><a href="#about">Company</a></li>
-            <li><a href="#about">All Companies</a></li>
+            <li><a href="/admin/company">Company</a></li>
+            <li><a href="/admin/all_companies">All Companies</a></li>
         </ul>
 
         <div class="col-sm-offset-2">
@@ -146,6 +146,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
         {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
-
+</div>
 </body>
+
 </html>

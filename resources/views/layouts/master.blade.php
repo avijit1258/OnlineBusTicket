@@ -85,7 +85,7 @@
         <li><a href="/admin/routes">Routes</a></li>
         <li><a href="/admin/all_routes">All Routes</a></li>
         <li><a href="/admin/company">Company</a></li>
-        <li><a href="#about">All Companies</a></li>
+        <li><a href="/admin/all_companies">All Companies</a></li>
     </ul>
     <div class="content">
         @yield('content')

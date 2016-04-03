@@ -10,13 +10,35 @@
             <form action="/adding_routes" method="post">
 
                 <label for="input_weekday">WeekDay</label>
-                <input type="text" name="weekday" id="input_weekday" class="form-control">
+                <select name="weekday" class="form-control">
+                    <option value="Saturday">Saturday</option>
+                    <option value="Sunday">Sunday</option>
+                    <option value="Monday">Monday</option>
+                    <option value="Tuseday">Tuesday</option>
+                    <option value="Wednesday">Wednesday</option>
+                    <option value="Thurseday">Thurseday</option>
+                    <option value="Friday">Friday</option>
+                </select>
 
                 <label for="input_boarding">Boarding Point</label>
-                <input type="text" name="boarding_point" id="input_boarding" class="form-control">
+                <select name="boarding_point" class="form-control">
+                    @foreach( $places as $place)
+                    {
+
+                        <option value={{$place->place_name}} > {{$place->place_name}}  </option> 
+                    }
+                        @endforeach
+                </select>
 
                 <label for="input_droping">Droping Point</label>
-                <input type="text" name="droping_point" id="input_droping" class="form-control">
+                <select name="droping_point" class="form-control">
+                    @foreach($places as $place)
+                        {
+
+                            <option value= {{$place->place_name}} >  {{ $place->place_name}}</option>          
+                        }
+                    @endforeach
+                </select>
 
                 <label for="input_company">Company Name</label>
                 <input type="text" name="company_name" id="input_company" class="form-control">

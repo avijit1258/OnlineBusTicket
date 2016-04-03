@@ -21,4 +21,10 @@ class AdminRouteController extends Controller
 
         return view('admin.all_routes',compact('allRoutes'));
     }
+    public function input()
+    {
+        $places = DB::select('select * from places');
+
+        return view('admin.adding_routes', compact('places'));
+    }
 }

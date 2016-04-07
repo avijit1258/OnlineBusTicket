@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class bus extends Model
+class Bus extends Model
 {
 
     public function company()

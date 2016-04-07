@@ -41,7 +41,15 @@
                 </select>
 
                 <label for="input_company">Company Name</label>
-                <input type="text" name="company_name" id="input_company" class="form-control">
+                <select name="company" class="form-control">
+                    @foreach($companies as $company)
+                        {
+
+                            <option value= {{$company->company_name}} >  {{ $company->company_name}}
+                            </option>          
+                        }
+                    @endforeach
+                </select>
 
                 <label for="input_schedule">Schedule</label>
                 <input type="time" name="schedule" id="input_schedule" class="form-control">

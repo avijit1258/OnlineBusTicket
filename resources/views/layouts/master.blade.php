@@ -14,80 +14,32 @@
     <!-- Styles -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
-
-
-    <style>
-        html, body {
-            height: 100%;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            display: table;
-            font-weight: 100;
-            font-family: "Times New Roman", Times, serif;
-        }
-
-        .container {
-            text-align: center;
-            display: table-cell;
-            vertical-align: middle;
-        }
-
-        .content {
-            text-align: center;
-            display: inline-block;
-        }
-
-        .title {
-            font-size: 96px;
-        }
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #333;
-        }
-
-        li {
-            float: left;
-        }
-
-        li a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-
-        li a:hover:not(.active) {
-            background-color: #111;
-        }
-
-        .active {
-            background-color: #4CAF50;
-        }
-    </style>
+    {{--<link rel="stylesheet" href="{{URL::asset('assets/css/home.css')}}">--}}
+    <script type="text/javascript" src="{{URL::asset('assets/js/home.js')}}"></script>
+   
 </head>
 
 <body>
 <div class="container">
 
-    <ul>
-        <li><a class="active" href="/">Home</a></li>
-        <li><a href="/places">Places</a></li>
-        <li><a href="#contact">Bus</a></li>
-        <li><a href="#about">Bus Type</a></li>
-        <li><a href="/admin/routes">Routes</a></li>
-        <li><a href="/admin/all_routes">All Routes</a></li>
-        <li><a href="/admin/company">Company</a></li>
-        <li><a href="/admin/all_companies">All Companies</a></li>
-    </ul>
-    <div class="content">
+    <nav class="navbar navbar-default">
+                  <div class="container-fluid">
+                    <div class="navbar-header">
+                      <a class="navbar-brand" href="#">GET READY</a>
+                    </div>
+                    <ul class="nav navbar-nav">
+                            <li><a class="active" href="/">Home</a></li>
+                            <li><a href="/places">Places</a></li>
+                            <li><a href="#contact">Bus</a></li>
+                            <li><a href="#about">Bus Type</a></li>
+                            <li><a href="/admin/routes">Routes</a></li>
+                            <li><a href="/admin/all_routes">All Routes</a></li>
+                            <li><a href="/admin/company">Company</a></li>
+                            <li><a href="/admin/all_companies">All Companies</a></li>
+                    </ul>
+                  </div>
+        </nav>
+    <div class="col-sm-offset-1">
         @yield('content')
     </div>
 </div>

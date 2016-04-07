@@ -4,9 +4,8 @@
 
 
     
-	Route::get('/', function () {
-	    return view('home.welcome');
-	});
+	Route::get('/', 'AdminRouteController@searchRoutes');
+	
 	Route::get('/places', 'PlaceController@index');
 
 	Route::post('/places', 'PlaceController@store' );

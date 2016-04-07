@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use App\Company;
 
 use App\Http\Requests;
 
@@ -24,7 +25,18 @@ class AdminRouteController extends Controller
     public function input()
     {
         $places = DB::select('select * from places');
+        $companies = Company::all();
 
-        return view('admin.adding_routes', compact('places'));
+        
+        return view('admin.adding_routes', compact('places', 'companies'));
     }
+    public function searchRoutes()
+    {
+        $places = DB::select('select * from places');
+        $companies = Company::all();
+
+
+        return view('home.welcome', compact('places', 'companies'));
+    }
+
 }

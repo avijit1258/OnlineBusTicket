@@ -9,6 +9,11 @@ use App\Http\Requests;
 
 class AdminRouteController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function store(Request $request){
         DB::insert('insert into admin_routes (weekday, boarding_point, droping_point, schedule, bus_number, company_name, fare)
              values (?,?,?,?,?,?, ?) ',[$request->weekday, $request->boarding_point, $request->droping_point, $request->schedule

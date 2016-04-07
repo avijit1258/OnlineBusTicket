@@ -9,6 +9,11 @@ use App\Http\Requests;
 
 class CompanyController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function store(Request $request){
         DB::insert('insert into companies (company_name, user_name, password)values(?,?,?)',[$request->company_name,
             $request->user_name, $request->password]);

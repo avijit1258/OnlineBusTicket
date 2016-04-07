@@ -4,12 +4,13 @@
 @section('content')
 
     <div class="panel panel-default">
+    
         <div class="panel-heading">
             Please Input New Routes
         </div>
         <div class="panel-body">
             <form action="/admin/company" method="post">
-
+                {!! csrf_field() !!}
                 <label for="input_company">Company Name</label>
                 <input type="text" name="company_name" id="input_company" class="form-control">
 

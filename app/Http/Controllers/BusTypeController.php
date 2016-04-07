@@ -8,5 +8,9 @@ use App\Http\Requests;
 
 class BusTypeController extends Controller
 {
-    //
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
 }

@@ -8,5 +8,10 @@ use App\Http\Requests;
 
 class UserRouteController extends Controller
 {
+	public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
 
 }

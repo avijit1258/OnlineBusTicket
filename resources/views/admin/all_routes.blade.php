@@ -6,6 +6,7 @@
         <div class="panel-heading">
             Edit and Delete Places
         </div>
+        
         <div class="panel-body">
             <table class="table table-striped place-table">
                 <thead>

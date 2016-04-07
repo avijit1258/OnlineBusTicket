@@ -6,9 +6,10 @@
         <div class="panel-heading">
             Please Input New Routes
         </div>
+       
         <div class="panel-body">
             <form action="/adding_routes" method="post">
-
+                 {!! csrf_field() !!}
                 <label for="input_weekday">WeekDay</label>
                 <input type="text" name="weekday" id="input_weekday" class="form-control">
 

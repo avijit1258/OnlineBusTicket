@@ -49,6 +49,11 @@
         li a:hover:not(.active) {
             background-color: #111;
         }
+        table {
+            display: block;
+          height: 500px;
+          overflow-y: scroll;
+        }
          tr{
             
             font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;

@@ -41,7 +41,7 @@
                 </select>
 
                 <label for="input_company">Company Name</label>
-                <select name="company" class="form-control">
+                <select name="company_name" class="form-control">
                     @foreach($companies as $company)
                         {
 

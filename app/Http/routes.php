@@ -10,6 +10,13 @@
 
 	Route::post('/places', 'PlaceController@store' );
 
+	Route::get('/admin/bus', 'BusController@index');
+	
+
+	Route::get('/admin/bus_type', 'BusTypeController@index');
+	Route::post('/admin/bus_type', 'BusTypeController@store');
+
+
 	Route::get('/admin/routes', 'AdminRouteController@input');
 	Route::post('/adding_routes', 'AdminRouteController@store');
 
@@ -26,7 +33,7 @@
 
 	Route::post('/route/edit/{{$id}}','AdminRouteController@update');
 
-Route::group(['middleware' => ['web']], function () {
+	Route::group(['middleware' => ['web']], function () {
     //
 
 });

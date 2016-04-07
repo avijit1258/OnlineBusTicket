@@ -30,8 +30,8 @@
                     <ul class="nav navbar-nav">
                             <li><a class="active" href="/">Home</a></li>
                             <li><a href="/places">Places</a></li>
-                            <li><a href="#contact">Bus</a></li>
-                            <li><a href="#about">Bus Type</a></li>
+                            <li><a href="/admin/bus">Bus</a></li>
+                            <li><a href="/admin/bus_type">Bus Type</a></li>
                             <li><a href="/admin/routes">Routes</a></li>
                             <li><a href="/admin/all_routes">All Routes</a></li>
                             <li><a href="/admin/company">Company</a></li>
@@ -39,7 +39,7 @@
                     </ul>
                   </div>
         </nav>
-    <div class="col-sm-offset-1">
+    <div class="container">
         @yield('content')
     </div>
 </div>

@@ -31,8 +31,8 @@ type='text/css'>
                     <ul class="nav navbar-nav">
                             <li><a class="active" href="/">Home</a></li>
                             <li><a href="/places">Places</a></li>
-                            <li><a href="#contact">Bus</a></li>
-                            <li><a href="#about">Bus Type</a></li>
+                            <li><a href="/admin/bus">Bus</a></li>
+                            <li><a href="/admin/bus_type">Bus Type</a></li>
                             <li><a href="/admin/routes">Routes</a></li>
                             <li><a href="/admin/all_routes">All Routes</a></li>
                             <li><a href="/admin/company">Company</a></li>
@@ -43,7 +43,7 @@ type='text/css'>
         
 
         <div class="col-sm-offset-2">
-                <div class="panel panel-default">
+                <div class="panel panel-default" >
                     <div class="panel-heading">
                         Edit and Delete Places
                     </div>
@@ -83,7 +83,7 @@ type='text/css'>
 
 
 
-        <div class="panel panel-default">
+        <div class="panel panel-default" >
             <div class="panel-heading">Add New Place </div>
             <div class="panel-body">
                 @yield('content')

@@ -1,8 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="content">
+
         <div >
             <form   action = "/places" method="post" class="form-vertical">
                 <div class="form-group">
@@ -14,8 +13,7 @@
                </button>
             </form>
         </div>
-    </div>
-</div>
+    
 
 @endsection
 

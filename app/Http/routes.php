@@ -1,5 +1,6 @@
 <?php
 
+
 /*
 |--------------------------------------------------------------------------
 | Routes File
@@ -26,33 +27,45 @@
 
 
 Route::group(['middleware' => 'web'], function () {
-    
+    /*
     Route::get('/', function () {
     return view('welcome');
 })->middleware('guest');
 
-Route::get('/places', 'PlaceController@index');
+	*/
 
-Route::post('/places', 'PlaceController@store' );
+    
+	Route::get('/', 'AdminRouteController@searchRoutes');
+	
+	Route::get('/places', 'PlaceController@index');
 
-Route::get('/admin/routes', function(){
-    return view('admin.adding_routes');
-});
-Route::post('/adding_routes', 'AdminRouteController@store');
+	Route::post('/places', 'PlaceController@store' );
 
-Route::get('/admin/company', function(){
-    return view('admin.adding_company');
-});
-Route::post('/admin/company', 'CompanyController@store');
+	Route::get('/admin/bus', 'BusController@index');
+	
 
-Route::get('/admin/all_companies', 'CompanyController@index');
+	Route::get('/admin/bus_type', 'BusTypeController@index');
+	Route::post('/admin/bus_type', 'BusTypeController@store');
 
-Route::get('/admin/all_routes', 'AdminRouteController@index');
 
-Route::get('/route/edit/{{$id}}','AdminRouteController@update');
+	Route::get('/admin/routes', 'AdminRouteController@input');
+	Route::post('/adding_routes', 'AdminRouteController@store');
 
-Route::post('/route/edit/{{$id}}','AdminRouteController@update');
+	Route::get('/admin/company', function(){
+	    return view('admin.adding_company');
+	});
+	Route::post('/admin/company', 'CompanyController@store');
+
 
     Route::get('/home', 'HomeController@index');
-    Route::auth();
-});
+    
+	Route::get('/admin/all_companies', 'CompanyController@index');
+
+	Route::get('/admin/all_routes', 'AdminRouteController@index');
+
+	Route::get('/route/edit/{{$id}}','AdminRouteController@update');
+
+	Route::post('/route/edit/{{$id}}','AdminRouteController@update');
+	Route::auth();
+
+}	

@@ -39,19 +39,19 @@ class CreateUserRoutesTable extends Migration
         //foreign keys at the last migration so that all tables are created
         Schema::table('user_routes', function(Blueprint $table)
         {
-            $table->foreign('bus_id')->references('id')->on('buses');
+            $table->foreign('bus_id')->references('id')->on('buses')->onDelete('cascade');
         });
         Schema::table('buses', function(Blueprint $table)
         {
-            $table->foreign('company_id')->references('id')->on('companies');
+            $table->foreign('company_id')->references('id')->on('companies')->onDelete('cascade');
         });
         Schema::table('bus_type', function(Blueprint $table)
         {
-            $table->foreign('bus_id')->references('id')->on('buses');
+            $table->foreign('bus_id')->references('id')->on('buses')->onDelete('cascade');
         });
         Schema::table('buses', function(Blueprint $table)
         {
-            $table->foreign('admin_route_id')->references('id')->on('admin_routes');
+            $table->foreign('admin_route_id')->references('id')->on('admin_routes')->onDelete('cascade');
         });
 
     }

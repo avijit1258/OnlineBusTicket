@@ -1,6 +1,7 @@
 @extends('layouts.placesMaster')
 
 @section('content')
+
 <div class="container">
     <div class="content">
         <div class="title">
@@ -16,8 +17,7 @@
                </button>
             </form>
         </div>
-    </div>
-</div>
+    
 
 @endsection
 

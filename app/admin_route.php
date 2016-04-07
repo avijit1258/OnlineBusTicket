@@ -4,11 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class admin_route extends Model
+class Admin_route extends Model
 {
     public function bus()
     {
-        return $this->hasOne('todoparrot\bus');
+        return $this->hasOne('todoparrot\Bus');
     }
 
 }

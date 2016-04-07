@@ -1,6 +1,9 @@
 @extends('layouts.master')
 
+
+
 @section('content')
+
 
     <div class="panel panel-default">
         <div class="panel-heading">
@@ -15,52 +18,54 @@
                 <th>UserName</th>
                 <th>Password</th>
 
-                </thead>
+
+                        </thead>
 
 
-                <tbody>
-                @foreach($allCompanies as $allCompany)
-                    <tr>
+                        <tbody>
+                        @foreach($allCompanies as $allCompany)
+                            <tr>
 
-                        <td class="table-text">{{$allCompany->id}}</td>
-                        <td class="table-text">{{$allCompany->company_name}}</td>
-                        <td class="table-text">{{$allCompany->user_name}}</td>
-                        <td class="table-text">{{$allCompany->password}}</td>
-
-
-                        <td>
-                            <form action="/route/{{ $allCompany->id }}" method="POST">
-                                {{ csrf_field() }}
-                                {{ method_field('UPDATE') }}
-
-                                <button type="submit" id="edit-route-{{ $allCompany->id }}" class="btn btn-success">
-                                    <i class="fa fa-btn fa-edit"></i>Edit
-                                </button>
-                            </form>
-                        </td>
+                                <td class="table-text">{{$allCompany->id}}</td>
+                                <td class="table-text">{{$allCompany->company_name}}</td>
+                                <td class="table-text">{{$allCompany->user_name}}</td>
+                                <td class="table-text">{{$allCompany->password}}</td>
 
 
-                        <td>
-                            <form action="/route/{{ $allCompany->id }}" method="POST">
-                                {{ csrf_field() }}
-                                {{ method_field('DELETE') }}
+                                <td>
+                                    <form action="/route/{{ $allCompany->id }}" method="POST">
+                                        {{ csrf_field() }}
+                                        {{ method_field('UPDATE') }}
 
-                                <button type="submit" id="delete-route-{{ $allCompany->id }}" class="btn btn-danger">
-                                    <i class="fa fa-btn fa-trash"></i>Delete
-                                </button>
-                            </form>
-                        </td>
-
-
-
-                    </tr>
-                @endforeach
-                </tbody>
+                                        <button type="submit" id="edit-route-{{ $allCompany->id }}" class="btn btn-success">
+                                            <i class="fa fa-btn fa-edit"></i>Edit
+                                        </button>
+                                    </form>
+                                </td>
 
 
-            </table>
+                                <td>
+                                    <form action="/route/{{ $allCompany->id }}" method="POST">
+                                        {{ csrf_field() }}
+                                        {{ method_field('DELETE') }}
 
-        </div>
-    </div>
+                                        <button type="submit" id="delete-route-{{ $allCompany->id }}" class="btn btn-danger">
+                                            <i class="fa fa-btn fa-trash"></i>Delete
+                                        </button>
+                                    </form>
+                                </td>
+
+
+
+                            </tr>
+                        @endforeach
+                        </tbody>
+
+
+                    </table>
+
+                </div>
+            </div>
+        
 
 @endsection

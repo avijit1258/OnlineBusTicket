@@ -2,6 +2,7 @@
 
 @section('content')
 
+
     <div class="panel panel-default">
         <div class="panel-heading">
             Edit and Delete Places
@@ -68,5 +69,6 @@
 
         </div>
     </div>
+
 
     @endsection

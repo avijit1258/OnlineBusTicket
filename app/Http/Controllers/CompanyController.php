@@ -23,7 +23,7 @@ class CompanyController extends Controller
 
     public function index()
     {
-        $allCompanies = company::all();
+        $allCompanies = Company::all();
         //DB::select('select * from admin_routes');
 
         return view('admin.all_companies',compact('allCompanies'));

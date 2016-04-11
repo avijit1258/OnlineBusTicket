@@ -7,15 +7,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="{{URL::asset('assets/css/home.css')}}">
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="{{URL::asset('assets/js/home.js')}}"></script>
+    <script type="text/javascript" src="http://s3.amazonaws.com/codecademy-content/courses/hour-of-code/js/alphabet.js"></script>
 	{{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
 </head>
 <body>
-	
   <div class="container">
     <div class="panel panel-default">
       <div class="panel-heading">
-        Welcome To Online Bus Ticket System
+        <canvas id="myCanvas"></canvas>
+        <script type="text/javascript" src="http://s3.amazonaws.com/codecademy-content/courses/hour-of-code/js/bubbles.js"></script>
+        <script type="text/javascript" src="{{URL::asset('assets/js/animate.js')}}"></script>
       </div>
       <div class="panel-body">
         <form action="/home/routes" method="post">

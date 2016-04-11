@@ -4,8 +4,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Bus_type;
-
+use App\bus_type;
+use App\company;
 use App\Http\Requests;
 
 class BusTypeController extends Controller
@@ -22,8 +22,10 @@ class BusTypeController extends Controller
     	$bus_type = new Bus_type;
 
     	$bus_type->type = $request->type;
-
+        
     	$bus_type->save();
-    	return view('admin.bus_type_input');
+        $bus_types = bus_type::all();
+       
+    	return view('admin.bus_type_input', compact('bus_types'));
     }
 }

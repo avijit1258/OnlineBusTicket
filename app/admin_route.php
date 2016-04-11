@@ -8,7 +8,7 @@ class Admin_route extends Model
 {
     public function bus()
     {
-        return $this->hasOne('todoparrot\Bus');
+        return $this->hasOne('App\Bus');
     }
 
 }

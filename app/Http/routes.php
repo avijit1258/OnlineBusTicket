@@ -11,7 +11,8 @@
 	Route::post('/places', 'PlaceController@store' );
 
 	Route::get('/admin/bus', 'BusController@index');
-	
+	Route::post('/admin/bus', 'BusController@store');
+
 
 	Route::get('/admin/bus_type', 'BusTypeController@index');
 	Route::post('/admin/bus_type', 'BusTypeController@store');

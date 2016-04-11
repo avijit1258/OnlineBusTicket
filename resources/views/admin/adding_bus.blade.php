@@ -8,10 +8,10 @@
 			Adding Buses
 		</div>
 		<div class="panel-body">
-			<form action="/adding_buses" method="post">
+			<form action="/admin/bus" method="post">
 
                 <label for="input_weekday">Company Name</label>
-                <select name="company" class="form-control">
+                <select name="company_name" class="form-control">
                     @foreach($companies as $company)
                         {
 

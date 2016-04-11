@@ -45,10 +45,7 @@ class CreateUserRoutesTable extends Migration
         {
             $table->foreign('company_id')->references('id')->on('companies')->onDelete('cascade');
         });
-        Schema::table('bus_type', function(Blueprint $table)
-        {
-            $table->foreign('bus_id')->references('id')->on('buses')->onDelete('cascade');
-        });
+        
         Schema::table('buses', function(Blueprint $table)
         {
             $table->foreign('admin_route_id')->references('id')->on('admin_routes')->onDelete('cascade');

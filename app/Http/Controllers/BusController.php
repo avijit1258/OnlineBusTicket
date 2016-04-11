@@ -38,7 +38,7 @@ class BusController extends Controller
 		$bus_types = Bus_type::all();
 		$companies = Company::all();
 
-		return view('admin.adding_bus', compact('buses','$bus_types', 'companies'));
+		return view('admin.adding_bus', compact('buses','bus_types', 'companies'));
 
 	}
 }

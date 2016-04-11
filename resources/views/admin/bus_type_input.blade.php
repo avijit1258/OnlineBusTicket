@@ -45,11 +45,11 @@
                                 <td class="table-text">{{$bus_type->type}}</td>
                                 
                                 <td>
-                                    <form action="/route/{{ $allCompany->id }}" method="POST">
+                                    <form action="/route/{{ $bus_type->id }}" method="POST">
                                         {{ csrf_field() }}
                                         {{ method_field('UPDATE') }}
 
-                                        <button type="submit" id="edit-route-{{ $allCompany->id }}" class="btn btn-success">
+                                        <button type="submit" id="edit-route-{{ $bus_type->id }}" class="btn btn-success">
                                             <i class="fa fa-btn fa-edit"></i>Edit
                                         </button>
                                     </form>
@@ -57,17 +57,15 @@
 
 
                                 <td>
-                                    <form action="/route/{{ $allCompany->id }}" method="POST">
+                                    <form action="/route/{{ $bus_type->id }}" method="POST">
                                         {{ csrf_field() }}
                                         {{ method_field('DELETE') }}
 
-                                        <button type="submit" id="delete-route-{{ $allCompany->id }}" class="btn btn-danger">
+                                        <button type="submit" id="delete-route-{{ $bus_type->id }}" class="btn btn-danger">
                                             <i class="fa fa-btn fa-trash"></i>Delete
                                         </button>
                                     </form>
                                 </td>
-
-
 
                             </tr>
                         @endforeach

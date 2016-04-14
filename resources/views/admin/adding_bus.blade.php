@@ -59,8 +59,8 @@
                         <th>Company Name</th>
                         <th>Bus Type</th>
                         <th>Bus Number</th>
-                        <th>Number of rows</th>
-                        <th>Number of columns</th>
+                        <th>Number of seats</th>
+                        
                         </thead>
 
 
@@ -69,18 +69,18 @@
                             <tr>
 
                                 <td class="table-text">{{$bus->company_name}}</td>
-                                <td class="table-text">{{$allCompany->bus_type}}</td>
-                                <td class="table-text">{{$allCompany->bus_number}}</td>
-                                <td class="table-text">{{$allCompany->no_of_rows}}</td>
-                                <td class="table-text">{{$allCompany->no_of_columns}}</td>
+                                <td class="table-text">{{$bus->bus_type}}</td>
+                                <td class="table-text">{{$bus->bus_number}}</td>
+                                <td class="table-text">{{strlen($bus->seats)}}</td>
+                                
 
 
                                 <td>
-                                    <form action="/route/{{ $allCompany->id }}" method="POST">
+                                    <form action="/route/{{ $bus->id }}" method="POST">
                                         {{ csrf_field() }}
                                         {{ method_field('UPDATE') }}
 
-                                        <button type="submit" id="edit-route-{{ $allCompany->id }}" class="btn btn-success">
+                                        <button type="submit" id="edit-route-{{ $bus->id }}" class="btn btn-success">
                                             <i class="fa fa-btn fa-edit"></i>Edit
                                         </button>
                                     </form>
@@ -88,11 +88,11 @@
 
 
                                 <td>
-                                    <form action="/route/{{ $allCompany->id }}" method="POST">
+                                    <form action="/route/{{ $bus->id }}" method="POST">
                                         {{ csrf_field() }}
                                         {{ method_field('DELETE') }}
 
-                                        <button type="submit" id="delete-route-{{ $allCompany->id }}" class="btn btn-danger">
+                                        <button type="submit" id="delete-route-{{ $bus->id }}" class="btn btn-danger">
                                             <i class="fa fa-btn fa-trash"></i>Delete
                                         </button>
                                     </form>

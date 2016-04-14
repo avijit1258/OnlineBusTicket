@@ -56,6 +56,16 @@
 
                 <label for="input_bus_no">Bus Number</label>
                 <input type="text" name="bus_number" id="input_bus_no" class="form-control">
+                <label for="input_bus_type">Bus Type</label>
+                <select name="bus_type" class="form-control">
+                    @foreach($bus_types as $bus_type)
+                        {
+
+                            <option value= {{$bus_type->type}} >  {{ $bus_type->type}}
+                            </option>          
+                        }
+                    @endforeach
+                </select>
 
                 <label for="input_fare">Fare</label>
                 <input type="text" name="fare" id="input_fare" class="form-control">

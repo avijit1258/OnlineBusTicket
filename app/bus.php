@@ -9,11 +9,15 @@ class Bus extends Model
 
     public function company()
     {
-        return $this->belongsTo('App\company');
+        return $this->belongsTo('App\Company');
+    }
+    public function admin_route()
+    {
+        return $this->hasOne('App\Admin_route');
     }
     public function user_routes()
     {
-        return $this->hasMany('App\user_route');
+        return $this->hasMany('App\User_route');
     }
     public function forBusView(){
 

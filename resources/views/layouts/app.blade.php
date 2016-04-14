@@ -60,11 +60,11 @@ type='text/css'>
 
                                     <td class="table-text">{{$allPlace->place_name}}</td>
                                     <td>
-                                        <form action="/place/{{ $allPlace->place_id }}" method="POST">
+                                        <form action="/place/{{ $allPlace->id }}" method="POST">
                                             {{ csrf_field() }}
                                             {{ method_field('DELETE') }}
 
-                                            <button type="submit" id="delete-place-{{ $allPlace->place_id }}" class="btn btn-danger">
+                                            <button type="submit" id="delete-place-{{ $allPlace->id }}" class="btn btn-danger">
                                                 <i class="fa fa-btn fa-trash"></i>Delete
                                             </button>
                                         </form>

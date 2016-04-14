@@ -8,7 +8,7 @@ class Company extends Model
 {
     public function buses()
     {
-        return $this->hasMany('App\bus');
+        return $this->hasMany('App\Bus');
     }
 
 }

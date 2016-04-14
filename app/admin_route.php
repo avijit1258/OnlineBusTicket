@@ -8,7 +8,7 @@ class Admin_route extends Model
 {
     public function bus()
     {
-        return $this->hasOne('App\Bus');
+        return $this->belongsTo('App\Bus');
     }
 
 }

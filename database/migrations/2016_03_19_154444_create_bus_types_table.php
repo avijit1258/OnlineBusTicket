@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBusTypeTable extends Migration
+class CreateBusTypesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,9 +12,9 @@ class CreateBusTypeTable extends Migration
      */
     public function up()
     {
-        Schema::create('bus_type', function (Blueprint $table) {
+        Schema::create('bus_types', function (Blueprint $table) {
             $table->increments('id');
-            $table->text('type');
+            $table->string('type')->unique();
             $table->timestamps();
         });
     }

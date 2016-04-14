@@ -37,6 +37,7 @@ class CreateUserRoutesTable extends Migration
         //there is a error in adding foreign keys while creating tables migration
         //because the referrence table may not exist at that time . so i added
         //foreign keys at the last migration so that all tables are created
+        /*
         Schema::table('user_routes', function(Blueprint $table)
         {
             $table->foreign('bus_id')->references('id')->on('buses')->onDelete('cascade');
@@ -50,6 +51,7 @@ class CreateUserRoutesTable extends Migration
         {
             $table->foreign('admin_route_id')->references('id')->on('admin_routes')->onDelete('cascade');
         });
+        */
 
     }
 

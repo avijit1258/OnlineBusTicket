@@ -32,8 +32,20 @@ class BusController extends Controller
 		$bus->bus_number = $request->bus_number;
 		$bus->no_of_rows = $request->no_of_rows;
 		$bus->no_of_columns = $request->no_of_columns;
+		$seats = "";
+		$totalSeats = $request->no_of_rows * $request->no_of_columns;
 
-		$bus->save();
+		for($i = 1; $i <= $totalSeats; $i++){
+			$seats = $seats."b";
+		}
+		//var_dump($seats);	
+		$bus->seats = $seats;
+
+		$company = Company::where('company_name', $request->company_name)->first();
+
+		$company->buses()->save($bus);
+
+		//$bus->save();
 		$buses = Bus::all();
 		$bus_types = Bus_type::all();
 		$companies = Company::all();

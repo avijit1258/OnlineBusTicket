@@ -23,7 +23,7 @@ class CreateAdminRoutesTable extends Migration
             $table->text('company_name');
             $table->float('fare');
             $table->date('date');
-            $table->integer('bus_bus_id')->unsigned();
+            $table->integer('bus_id')->unsigned();
 
             //This property requires some analysis
             //$table->integer('bus_company_id');

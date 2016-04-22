@@ -15,11 +15,7 @@ use App\Http\Requests;
 class AdminRouteController extends Controller
 {
     public function store(Request $request){
-        /*DB::insert('insert into admin_routes (weekday, boarding_point, droping_point, schedule, bus_number, company_name, fare)
-             values (?,?,?,?,?,?, ?) ',[$request->weekday, $request->boarding_point, $request->droping_point, $request->schedule
-            ,$request->bus_number, $request->company_name, $request->fare]);
-         $places = DB::select('select * from places');
-        */
+        
          $places = Place::all();
         $companies = Company::all(); 
         $bus_types = Bus_type::all();
@@ -66,6 +62,16 @@ class AdminRouteController extends Controller
 
 
         return view('home.welcome', compact('places', 'companies'));
+    }
+    public function showRoutes(Request $request)
+    {
+        $route = ['boarding_point' => $request->boarding_point,'droping_point' => $request->droping_point];
+
+        $routes = Admin_route::where($route)->get();
+        //$routes = Admin_route::find(1);
+        var_dump($routes);
+
+        return view('home.search', compact('routes'));
     }
 
 }

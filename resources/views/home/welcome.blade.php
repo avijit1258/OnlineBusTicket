@@ -19,9 +19,11 @@
         <canvas id="myCanvas"></canvas>
         <script type="text/javascript" src="http://s3.amazonaws.com/codecademy-content/courses/hour-of-code/js/bubbles.js"></script>
         <script type="text/javascript" src="{{URL::asset('assets/js/animate.js')}}"></script>
+        <script type="text/javascript" src="{{URL::asset('assets/js/home.js')}}"></script>
       </div>
       <div class="panel-body">
-        <form action="/home/routes" method="post">
+        
+        <form action="/" method="post">
 
                 <label for="input_boarding">From</label>
                 <select name="boarding_point" class="form-control">

@@ -5,6 +5,7 @@
 
     
 	Route::get('/', 'AdminRouteController@searchRoutes');
+	Route::post('/', 'AdminRouteController@showRoutes');
 	
 	Route::get('/places', 'PlaceController@index');
 
